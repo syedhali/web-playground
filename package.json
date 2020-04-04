@@ -32,6 +32,6 @@
     }
   },
   "lint-staged": {
-    "js/*.{js,css,md},webpack.config.js": "prettier --write"
+    "!dist/*.{js,css,md}": "prettier --write"
   }
 }
