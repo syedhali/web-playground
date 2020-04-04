@@ -1,5 +1,5 @@
 #!/bin/bash
 git diff --diff-filter=d --staged --name-only | grep -e '\(.*\).js' | while read line; do
-  node_modules/prettier/bin-prettier.js "${line}" --write;
+  node_modules/prettier/bin-prettier.js --ignore-path "dist" "${line}" --write;
   git add "$line";
 done
