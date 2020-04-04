@@ -1,7 +1,5 @@
 const path = require("path");
 
-console.log("Hi mom");
-
 module.exports = {
   entry: "./js/index.js",
   mode: "production",
