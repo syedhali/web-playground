@@ -1,8 +1,0 @@
-#!/bin/bash
-
-git diff --diff-filter=d --staged --name-only | grep -e '\(js/.*\).js' | while read line; do
-  node_modules/prettier/bin-prettier.js "${line}" --write;
-  git add "$line";
-done
-
-node_modules/prettier/bin-prettier.js 'webpack.config.js' --write
